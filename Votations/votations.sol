@@ -29,6 +29,7 @@ contract votation{
         candidates.push(_name);
     }
 
+    //Checks if person has voted
     function hasVoted(bytes32 voter_Hash) private view returns (bool){
         uint i = 0;
         bool flag = false;
@@ -58,6 +59,24 @@ contract votation{
         return candidate_Votes[_candidate];
     }
 
+    //Get winner candidate
+    function getWinner() external view returns(string memory){
+        bool tie = false;
+        string memory maxVotesCandidate = candidates[0];
+        for(uint i=1; i<candidates.length; i++){
+            if(candidate_Votes[candidates[i]] > candidate_Votes[maxVotesCandidate]){
+                maxVotesCandidate = candidates[i];
+                tie = false;
+            }
+            else
+                if(candidate_Votes[candidates[i]] == candidate_Votes[maxVotesCandidate])
+                    tie = true;
+        }
+        if(!tie)
+            return maxVotesCandidate;
+        else
+            return "TIE";
+    }
 
 }
 
