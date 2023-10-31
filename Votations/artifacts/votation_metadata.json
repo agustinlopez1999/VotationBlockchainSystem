@@ -41,6 +41,19 @@
 						"type": "string"
 					}
 				],
+				"name": "Vote",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "string",
+						"name": "_candidate",
+						"type": "string"
+					}
+				],
 				"name": "getVotes",
 				"outputs": [
 					{
@@ -107,11 +120,11 @@
 	},
 	"sources": {
 		"Votations/votations.sol": {
-			"keccak256": "0xc4e18f886537f82a1a6c1d4f0aff5f9300e8a5b4aefe3aadcfa76001626c89dd",
+			"keccak256": "0xae90c104840f988601bbfd294c43c99dcd1a5a6d650453cbec6593d4c714b257",
 			"license": "MIT",
 			"urls": [
-				"bzz-raw://04f4686b0c74bc1a6867532ae0b779bf39314a030dc9a83759b7a3157f48c2b9",
-				"dweb:/ipfs/QmT9yRdGHLBpdQWFscj4yskvvT6hGYTfbkQu7DYXRuJbo6"
+				"bzz-raw://77c9b18e4b1d12de098638445aabfe0734c7e4af983775f35f538d880a7815be",
+				"dweb:/ipfs/QmetHpBJBedSmTuifFZQGTQkz5dmpnmeCi2Uzr9fHo7aKd"
 			]
 		}
 	},
